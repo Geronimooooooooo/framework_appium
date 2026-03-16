@@ -1,6 +1,10 @@
 package org.vuquylong;
 
 import org.testng.annotations.Test;
+import org.vuquylong.PageObjects.android.CartPage;
+import org.vuquylong.PageObjects.android.FormPage;
+import org.vuquylong.PageObjects.android.ProductCatalogue;
+import org.vuquylong.TestUtils.BasesTest;
 import org.testng.AssertJUnit;
 import java.time.Duration;
 import java.util.List;
@@ -13,11 +17,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import org.vuquylong.PageObjects.android.CartPage;
-import org.vuquylong.PageObjects.android.FormPage;
-import org.vuquylong.PageObjects.android.ProductCatalogue;
+
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class eCommerce_tc_3_Hybrid extends BasesTest {
 	float totalAmount = 0;
@@ -99,9 +103,9 @@ public class eCommerce_tc_3_Hybrid extends BasesTest {
 		driver.context("WEBVIEW_com.androidsample.generalstore");
 		driver.findElement(By.name("q")).sendKeys("facebook");
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-		// Thread.sleep(6000L);
-		// driver.pressKey(new KeyEvent(AndroidKey.BACK));
-		// driver.context("NATIVE_APP");
+		Thread.sleep(6000L);
+		driver.pressKey(new KeyEvent(AndroidKey.BACK));
+		driver.context("NATIVE_APP");
 	}
 	
 	@DataProvider

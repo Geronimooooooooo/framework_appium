@@ -1,11 +1,9 @@
 package org.vuquylong;
 
 import org.testng.annotations.Test;
+import org.vuquylong.TestUtils.BasesTest;
 import org.testng.AssertJUnit;
 import org.openqa.selenium.By;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import io.appium.java_client.AppiumBy;
 
 public class eCommerce_tc_1 extends BasesTest {
